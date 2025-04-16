@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Phone, Facebook, Instagram, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
@@ -8,9 +8,11 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 rounded-full bg-brand-purple flex items-center justify-center mr-3">
-                <span className="font-bold text-lg">PL</span>
-              </div>
+              <img 
+                src="/images/logo.png" 
+                alt="Punto Limpio Sinaloa Logo" 
+                className="w-12 h-12 rounded-full mr-3"
+              />
               <span className="font-bold text-xl">Punto Limpio Sinaloa</span>
             </div>
             <p className="text-gray-400 mb-6">

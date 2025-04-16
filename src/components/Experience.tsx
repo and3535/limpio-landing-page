@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const Experience = () => {
   return (
     <section className="bg-gray-50 section-padding">
@@ -38,7 +40,7 @@ const Experience = () => {
           
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1603712725038-e9334ae8f39f?auto=format&fit=crop&q=80" 
+              src="/images/experience-image.jpg"
               alt="Equipo de limpieza profesional" 
               className="rounded-lg shadow-xl w-full h-auto"
             />

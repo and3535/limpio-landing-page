@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { CheckCircle } from 'lucide-react';
 
 const Services = () => {
@@ -34,7 +35,7 @@ const Services = () => {
       id="servicios" 
       className="relative section-padding"
       style={{
-        backgroundImage: "url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80')",
+        backgroundImage: "url('/images/services-background.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed"

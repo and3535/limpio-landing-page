@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -25,9 +24,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-brand-purple flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-lg">PL</span>
-            </div>
+            <img 
+              src="/images/logo.png" 
+              alt="Punto Limpio Logo" 
+              className="w-12 h-12 rounded-full mr-3"
+            />
             <span className={`font-bold text-xl ${isScrolled ? 'text-brand-blue' : 'text-white'}`}>
               Punto Limpio
             </span>
