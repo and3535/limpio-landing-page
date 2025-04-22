@@ -1,4 +1,3 @@
-import React from 'react';
 
 const Features = () => {
   return (
@@ -54,7 +53,7 @@ const Features = () => {
             </div>
             <div className="flex items-center justify-center">
               <img 
-                src="/images/features-image.jpg" 
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&q=80" 
                 alt="Limpieza profesional" 
                 className="rounded-lg shadow-lg max-w-full h-auto object-cover"
                 style={{ maxHeight: '400px' }}
