@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,9 +26,11 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-12 h-12 rounded-full bg-brand-purple flex items-center justify-center mr-3">
-              <span className="text-white font-bold text-lg">PL</span>
-            </div>
+            <img
+              src="/images/logo.jpg"
+              alt="Punto Limpio Logo"
+              className="w-12 h-12 rounded-full object-cover mr-3"
+            />
             <span className={`font-bold text-xl ${isScrolled ? 'text-brand-blue' : 'text-white'}`}>
               Punto Limpio
             </span>
@@ -35,30 +38,22 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a 
-              href="#inicio" 
+            <Link 
+              to="/"
               className={`font-medium transition-colors ${
                 isScrolled ? 'text-gray-700 hover:text-brand-purple' : 'text-white hover:text-brand-gold'
               }`}
             >
               Inicio
-            </a>
-            <a 
-              href="#servicios" 
-              className={`font-medium transition-colors ${
-                isScrolled ? 'text-gray-700 hover:text-brand-purple' : 'text-white hover:text-brand-gold'
-              }`}
-            >
-              Servicios
-            </a>
-            <a 
-              href="#contacto" 
+            </Link>
+            <Link 
+              to="/contacto"
               className={`font-medium transition-colors ${
                 isScrolled ? 'text-gray-700 hover:text-brand-purple' : 'text-white hover:text-brand-gold'
               }`}
             >
               Contacto
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -79,27 +74,20 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden pt-4 pb-4 bg-white shadow-lg rounded-lg mt-2 absolute left-4 right-4 animate-fade-down">
             <div className="flex flex-col space-y-3 px-4">
-              <a 
-                href="#inicio" 
+              <Link 
+                to="/"
                 className="font-medium text-gray-700 hover:text-brand-purple"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Inicio
-              </a>
-              <a 
-                href="#servicios" 
-                className="font-medium text-gray-700 hover:text-brand-purple"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Servicios
-              </a>
-              <a 
-                href="#contacto" 
+              </Link>
+              <Link 
+                to="/contacto"
                 className="font-medium text-gray-700 hover:text-brand-purple"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contacto
-              </a>
+              </Link>
             </div>
           </div>
         )}
