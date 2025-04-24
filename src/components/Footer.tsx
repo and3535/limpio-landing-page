@@ -58,7 +58,7 @@ const Footer = () => {
                 <a href="#servicios" className="text-gray-400 hover:text-brand-gold transition-colors">Limpieza de Alfombras</a>
               </li>
               <li>
-                <a href="#servicios" className="text-gray-400 hover:text-brand-gold transition-colors">Desinfección Profesional</a>
+                <a href="#servicios" className="text-gray-400 hover:text-brand-gold transition-colors">Desinfección de Espacios</a>
               </li>
             </ul>
           </div>

@@ -1,31 +1,32 @@
 
 import { CheckCircle } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
     {
       id: 1,
       icon: "🛋️",
-      title: "Limpieza de Muebles",
-      description: "Limpieza profunda de sofás, sillones y muebles tapizados con tecnología de extracción."
+      title: "Limpieza de Salas",
+      description: "Devuelve la frescura a tu hogar. Eliminamos manchas, olores y suciedad de tus salas y sillones con tecnología de extracción profunda."
     },
     {
       id: 2,
       icon: "🛏️",
       title: "Limpieza de Colchones",
-      description: "Eliminamos ácaros, manchas y olores de tu colchón, dejándolo como nuevo."
+      description: "Duerme tranquilo, respira limpio. Eliminamos ácaros, manchas y olores dejando tu colchón como nuevo, ideal para hogares con niños o mascotas."
     },
     {
       id: 3,
-      icon: "🧶",
-      title: "Limpieza de Alfombras",
-      description: "Servicio especializado para alfombras y tapetes con tratamientos anti-manchas."
+      icon: "🧼",
+      title: "Limpieza de Tapetes y Alfombras",
+      description: "Protege tu salud y renueva tus espacios. Tratamientos anti-manchas y desinfección profunda que cuidan cada fibra sin dañar tus textiles."
     },
     {
       id: 4,
       icon: "🧪",
-      title: "Desinfección",
-      description: "Desinfección profesional de espacios con productos certificados y seguros."
+      title: "Desinfección de espacios",
+      description: "Ambientes seguros, hogares felices. Desinfección profesional con productos certificados, seguros para niños, adultos mayores y mascotas."
     }
   ];
 
@@ -54,13 +55,13 @@ const Services = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service) => (
-            <div key={service.id} className="service-card group">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-brand-purple transition-colors">
+            <div key={service.id} className="service-card group flex flex-col h-full cursor-default">
+              <div className="text-4xl mb-4 text-center">{service.icon}</div>
+              <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-brand-purple transition-colors text-center">
                 {service.title}
               </h3>
-              <p className="text-gray-600 mb-4">{service.description}</p>
-              <div className="flex items-center text-brand-purple">
+              <p className="text-gray-600 flex-1 text-center">{service.description}</p>
+              <div className="flex justify-center items-center text-brand-purple mt-2">
                 <CheckCircle className="w-5 h-5 mr-2" />
                 <span className="text-sm font-medium">Servicio Garantizado</span>
               </div>
@@ -69,12 +70,12 @@ const Services = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <a 
-            href="#contacto" 
+          <Link 
+            to="/contacto" 
             className="inline-block bg-brand-gold hover:bg-brand-orange text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
           >
             Solicitar Servicio
-          </a>
+          </Link>
         </div>
       </div>
     </section>
